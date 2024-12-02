@@ -12,6 +12,7 @@ namespace Global
     private:
         Event::EventService* event_service;
         Graphics::GraphicService* graphic_service;
+        //Level::LevelService* level_service;
         Sound::SoundService* sound_service;
         UI::UIService* ui_service;
         Time::TimeService* time_service;
