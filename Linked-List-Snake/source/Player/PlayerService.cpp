@@ -15,7 +15,7 @@ namespace Player
 		destroy();
 	}
 
-	/*void PlayerService::createController()
+	void PlayerService::createController()
 	{
 		snake_controller = new SnakeController();
 	}
@@ -33,7 +33,7 @@ namespace Player
 	void PlayerService::render()
 	{
 		snake_controller->render();
-	}*/
+	}
 
 	void PlayerService::spawnPlayer() { }
 
