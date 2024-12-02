@@ -7,7 +7,7 @@ namespace Global
 	using namespace Sound;
 	using namespace UI;
 	using namespace Time;
-
+	//using namespace Level;
 	ServiceLocator::ServiceLocator()
 	{
 		graphic_service = nullptr;
