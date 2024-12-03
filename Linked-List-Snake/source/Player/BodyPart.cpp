@@ -67,4 +67,35 @@ namespace Player
 		bodypart_image->setRotation(getRotationAngle());
 		bodypart_image->update();
 	}
+
+	sf::Vector2i BodyPart::getNextPosition()
+	{
+		switch (direction)
+		{
+		case Direction::UP:
+			return getNextPositionUp();
+		case Direction::DOWN:
+			return getNextPositionDown();
+		case Direction::RIGHT:
+			return getNextPositionRight();
+		case Direction::LEFT:
+			return getNextPositionLeft();
+		default:
+			return grid_position;
+		}
+	}
+
+	void BodyPart::setPosition(sf::Vector2i position)
+	{
+		grid_position = position;
+	}
+
+	void BodyPart::updatePosition()
+	{
+		
+
+		bodypart_image->setPosition(getBodyPartScreenPosition());
+		bodypart_image->setRotation(getRotationAngle());
+		bodypart_image->update();
+	}
 }
