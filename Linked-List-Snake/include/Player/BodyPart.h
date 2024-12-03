@@ -2,6 +2,8 @@
 #include <SFML/Graphics.hpp>
 #include "UI/UIElement/ImageView.h"
 
+#include "Direction.h"
+
 class BodyPart
 {
 protected:
@@ -12,4 +14,4 @@ protected:
 
 	float bodypart_width;
 	float bodypart_height;
-}
+};
