@@ -31,7 +31,27 @@ namespace Player
 
 		single_linked_list->initialize(width, height, default_position, default_direction);
 	}
+	void SnakeController::processPlayerInput()
+	{
+		EventService* event_service = ServiceLocator::getInstance()->getEventService();
 
+		if (event_service->pressedUpArrowKey() && current_snake_direction != Direction::DOWN)
+		{
+			current_snake_direction = Direction::UP;
+		}
+		else if (event_service->pressedDownArrowKey() && current_snake_direction != Direction::UP)
+		{
+			current_snake_direction = Direction::DOWN;
+		}
+		else if (event_service->pressedLeftArrowKey() && current_snake_direction != Direction::RIGHT)
+		{
+			current_snake_direction = Direction::LEFT;
+		}
+		else if (event_service->pressedRightArrowKey() && current_snake_direction != Direction::LEFT)
+		{
+			current_snake_direction = Direction::RIGHT;
+		}
+	}
 	void SnakeController::update()
 	{
 		switch (current_snake_state)
@@ -87,5 +107,22 @@ namespace Player
 	void SnakeController::destroy()
 	{
 		delete (single_linked_list);
+	}
+
+	void SnakeController::update()
+	{
+		switch (current_snake_state)
+		{
+		case SnakeState::ALIVE:
+			processPlayerInput();
+			updateSnakeDirection();
+			processSnakeCollision();
+			moveSnake();
+			break;
+
+		case SnakeState::DEAD:
+			handleRestart();
+			break;
+		}
 	}
 }

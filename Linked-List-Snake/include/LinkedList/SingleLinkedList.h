@@ -26,12 +26,5 @@ namespace LinkedList
 		void render();
 	};
 
-	void SingleLinkedList::render() {
-		Node* cur_node = head_node;
 
-		while (cur_node != nullptr) {     // Traverse through the linked list and render each node's body part
-			cur_node->body_part.render();
-			cur_node = cur_node->next;
-		}
-	}
 }
