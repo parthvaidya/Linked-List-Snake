@@ -9,6 +9,12 @@ namespace Player
 		DEAD,
 	};
 
+	enum class InputState
+	{
+		WAITING,
+		PROCESSING
+	};
+
 	class SnakeController
 	{
 	private:
