@@ -30,5 +30,6 @@ namespace Food
 		void render();
 
 		void startFoodSpawning();
+		void getValidSpawnPosition();
 	};
 }
