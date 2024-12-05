@@ -13,6 +13,7 @@ namespace Level
         float cell_width;
         float cell_height;
 
+
     public:
         static const int number_of_rows = 28;
         static const int number_of_columns = 50;
@@ -24,5 +25,6 @@ namespace Level
 
         float getCellWidth();
         float getCellHeight();
+
     };
 }

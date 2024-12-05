@@ -96,6 +96,12 @@
     <ClCompile Include="source\LinkedList\SingleLinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\Element\Obstacle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Element\ElementService.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Main\GameService.h">
@@ -186,6 +192,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\LinkedList\SingleLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Element\ElementData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Element\Obstacle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Element\ElementService.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
