@@ -142,6 +142,15 @@ namespace LinkedList
 		insertNodeAt(midIndex);             // Use the existing function to insert the node at the found index             
 	}
 
+	void SingleLinkedList::removeNodeAtHead()
+	{
+		Node* cur_node = head_node;
+		head_node = head_node->next;
+
+		cur_node->next = nullptr;
+		delete (cur_node);
+	}
+
 	void SingleLinkedList::insertNodeAtTail() {
 		Node* new_node = createNode();
 		Node* cur_node = head_node;
