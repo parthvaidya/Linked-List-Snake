@@ -194,6 +194,39 @@ namespace LinkedList
 		prev_node->next = nullptr;
 	}
 
+	void SingleLinkedList::reverseNodeDirections()
+	{
+		Node* curr_node = head_node;
+
+		while (curr_node != nullptr)
+		{
+			curr_node->body_part.setDirection(getReverseDirection(curr_node->body_part.getPreviousDirection()));
+			curr_node = curr_node->next;
+		}
+	}
+
+	Direction SingleLinkedList::reverse()
+	{
+		Node* cur_node = head_node;
+		Node* prev_node = nullptr;
+		Node* next_node = nullptr;
+
+		while (cur_node != nullptr)
+		{
+			next_node = cur_node->next;
+			cur_node->next = prev_node;
+
+			prev_node = cur_node;
+			cur_node = next_node;
+		}
+
+		head_node = prev_node;
+
+		reverseNodeDirections();
+		return head_node->body_part.getDirection();
+	}
+
+
 	void SingleLinkedList::insertNodeAtTail() {
 		Node* new_node = createNode();
 		Node* cur_node = head_node;

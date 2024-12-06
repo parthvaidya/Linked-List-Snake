@@ -32,6 +32,12 @@ namespace Player
 		initializeBodyPartImage();
 	}
 
+	void BodyPart::setDirection(Direction direction)
+	{
+		previous_direction = this->direction;
+		this->direction = direction;
+	}
+
 	sf::Vector2f BodyPart::getBodyPartScreenPosition()
 	{
 		float x_screen_position = LevelView::border_offset_left + (grid_position.x * bodypart_width) + (bodypart_width / 2);
