@@ -17,6 +17,7 @@ namespace LinkedList
 		Direction default_direction;
 
 		Node* createNode();
+		sf::Vector2i SingleLinkedList::getNewNodePosition(Node* reference_node, Operation operation) { }
 
 	public:
 		SingleLinkedList();
