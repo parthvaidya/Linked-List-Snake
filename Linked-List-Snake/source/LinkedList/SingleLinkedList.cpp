@@ -114,6 +114,34 @@ namespace LinkedList
 		initializeNode(cur_node, prev_node, Operation::TAIL);
 	}
 
+	int SingleLinkedList::findMiddleNode()
+	{
+		Node* slow = head_node;
+		Node* fast = head_node;
+		int midIndex = 0;  // This will track the index of the middle node.
+
+		// Move fast pointer at 2x speed and slow pointer at 1x speed.
+		while (fast != nullptr && fast->next != nullptr) {
+			slow = slow->next;
+			fast = fast->next->next;
+			midIndex++;
+		}
+
+		// Now, slow is at the middle node
+		return midIndex;
+	}
+
+	void SingleLinkedList::insertNodeAtMiddle()
+	{
+		if (head_node == nullptr) {
+			insertNodeAtHead();             // If the list is empty, insert at the head.
+			return;
+		}
+
+		int midIndex = findMiddleNode();    // Use the existing function to find the middle index
+		insertNodeAt(midIndex);             // Use the existing function to insert the node at the found index             
+	}
+
 	void SingleLinkedList::insertNodeAtTail() {
 		Node* new_node = createNode();
 		Node* cur_node = head_node;
