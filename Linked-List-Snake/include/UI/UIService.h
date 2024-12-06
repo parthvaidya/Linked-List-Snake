@@ -14,6 +14,7 @@ namespace UI
 		MainMenu::MainMenuUIController* main_menu_controller;
 		Instructions::InstructionsScreenUIController* instructions_screen_ui_controller;
 		Credits::CreditsScreenUIController* credits_screen_ui_controller;
+		LevelSelection::LevelSelectionUIController* level_selection_ui_controller;
 
 
 		void createControllers();
