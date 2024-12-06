@@ -57,6 +57,45 @@ namespace LinkedList
 		new_node->body_part.initialize(node_width, node_height, position, reference_node->body_part.getDirection());
 	}
 
+	void SingleLinkedList::insertNodeAtHead()
+	{
+		linked_list_size++;
+		Node* new_node = createNode();
+
+		if (head_node == nullptr)
+		{
+			head_node = new_node;
+			initializeNode(new_node, nullptr, Operation::HEAD);
+			return;
+		}
+
+		initializeNode(new_node, head_node, Operation::HEAD);
+		new_node->next = head_node;
+		head_node = new_node;
+	}
+
+	void SingleLinkedList::insertNodeAtTail()
+	{
+		linked_list_size++;
+		Node* new_node = createNode();
+		Node* cur_node = head_node;
+
+		if (cur_node == nullptr)
+		{
+			head_node = new_node;
+			initializeNode(new_node, nullptr, Operation::TAIL);
+			return;
+		}
+
+		while (cur_node->next != nullptr)
+		{
+			cur_node = cur_node->next;
+		}
+
+		cur_node->next = new_node;
+		initializeNode(new_node, cur_node, Operation::TAIL);
+	}
+
 	void SingleLinkedList::insertNodeAtTail() {
 		Node* new_node = createNode();
 		Node* cur_node = head_node;
