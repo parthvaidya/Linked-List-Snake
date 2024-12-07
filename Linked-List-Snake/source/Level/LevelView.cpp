@@ -18,6 +18,12 @@ namespace Level
         destroy();
     }
 
+    void LevelView::calculateGridExtents() {
+        sf::RenderWindow* game_window = ServiceLocator::getInstance()->getGraphicService()->getGameWindow();
+
+        grid_width = game_window->getSize().x - 2 * border_offset_left;
+        grid_height = game_window->getSize().y - border_offset_top - border_offset_bottom;  // Adjusted to new top and bottom offsets
+    }
     void LevelView::createViews()
     {
         background_rectangle = new RectangleShapeView();
