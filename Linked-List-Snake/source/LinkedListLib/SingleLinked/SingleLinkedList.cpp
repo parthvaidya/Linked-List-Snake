@@ -37,5 +37,14 @@ namespace LinkedListLib
             initializeNode(new_node, cur_node, Operation::TAIL);
         }
 
+        void SingleLinkedList::removeNodeAtHead() {
+            Node* cur_node = head_node;
+            head_node = head_node->next;
+
+            cur_node->next = nullptr;
+            delete cur_node;
+        }
+
+
     }
 }
