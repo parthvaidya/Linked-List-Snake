@@ -113,5 +113,13 @@ namespace LinkedListLib
             delete (cur_node);
         }
 
+        void DoubleLinkedList::removeNodeAtMiddle()
+        {
+            if (head_node == nullptr) return; // If the list is empty, there's nothing to remove
+
+            int midIndex = findMiddleNode();  // Use the existing function to find the middle index
+            removeNodeAt(midIndex);           // Use the existing function to remove the node at the found index
+        }
+
     }
 }
