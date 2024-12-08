@@ -177,6 +177,12 @@
     <ClInclude Include="include\Level\LevelData.h" />
     <ClInclude Include="include\Level\LevelModel.h" />
     <ClInclude Include="include\Level\LevelView.h" />
+    <ClInclude Include="include\LinkedListLib\DoubleLinked\DoubleLinkedList.h" />
+    <ClInclude Include="include\LinkedListLib\DoubleLinked\DoubleNode.h" />
+    <ClInclude Include="include\LinkedListLib\LinkedList.h" />
+    <ClInclude Include="include\LinkedListLib\Node.h" />
+    <ClInclude Include="include\LinkedListLib\SingleLinked\SingleLinkedList.h" />
+    <ClInclude Include="include\LinkedListLib\SingleLinked\SingleNode.h" />
     <ClInclude Include="include\LinkedList\SingleLinkedList.h" />
     <ClInclude Include="include\Player\BodyPart.h" />
     <ClInclude Include="include\Player\Direction.h" />
