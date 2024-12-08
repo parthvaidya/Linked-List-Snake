@@ -121,5 +121,15 @@ namespace LinkedListLib
             removeNodeAt(midIndex);           // Use the existing function to remove the node at the found index
         }
 
+        void DoubleLinkedList::removeAllNodes()
+        {
+            if (head_node == nullptr) return;
+
+            while (head_node != nullptr)
+            {
+                removeNodeAtHead();
+            }
+        }
+
     }
 }
