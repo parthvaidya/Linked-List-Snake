@@ -65,5 +65,16 @@ namespace LinkedListLib
             initializeNode(new_node, cur_node, Operation::TAIL);
         }
 
+        void DoubleLinkedList::insertNodeAtMiddle()
+        {
+            if (head_node == nullptr) {
+                insertNodeAtHead();             // If the list is empty, insert at the head.
+                return;
+            }
+
+            int midIndex = findMiddleNode();    // Use the existing function to find the middle index
+            insertNodeAtIndex(midIndex);             // Use the existing function to insert the node at the found index             
+        }
+
     }
 }
