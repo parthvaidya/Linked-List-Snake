@@ -219,6 +219,30 @@ namespace Player
 		return current_snake_state;
 	}
 
+
+	void SnakeController::createLinkedList(LinkedListType level_type)
+	{
+		switch (level_type)
+		{
+		case LinkedListType::SINGLE_LINKED_LIST:
+			linked_list = new SingleLinkedList();
+			break;
+		case LinkedListType::DOUBLE_LINKED_LIST:
+			linked_list = new DoubleLinkedList();
+			break;
+		}
+
+		initializeLinkedList();
+	}
+
+	void SnakeController::initializeLinkedList()
+	{
+		float width = ServiceLocator::getInstance()->getLevelService()->getCellWidth();
+		float height = ServiceLocator::getInstance()->getLevelService()->getCellHeight();
+
+		reset();
+		linked_list->initialize(width, height, default_position, default_direction);
+	}
 	void SnakeController::destroy()
 	{
 		delete (single_linked_list);
