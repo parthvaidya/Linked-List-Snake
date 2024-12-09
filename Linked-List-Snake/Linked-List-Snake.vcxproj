@@ -141,6 +141,8 @@
     <ClCompile Include="source\Level\LevelController.cpp" />
     <ClCompile Include="source\Level\LevelModel.cpp" />
     <ClCompile Include="source\Level\LevelView.cpp" />
+    <ClCompile Include="source\LinkedListLib\DoubleLinked\DoubleLinkedList.cpp" />
+    <ClCompile Include="source\LinkedListLib\SingleLinked\SingleLinkedList.cpp" />
     <ClCompile Include="source\LinkedList\SingleLinkedList.cpp" />
     <ClCompile Include="source\Player\BodyPart.cpp" />
     <ClCompile Include="source\Player\PlayerService.cpp" />
